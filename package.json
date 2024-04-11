@@ -1,0 +1,32 @@
+{
+  "name": "sherlock-discord-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
+    "start": "node build/src/app.js",
+    "dev": "ts-node-dev -r tsconfig-paths/register --transpile-only --no-notify src/bot.ts",
+    "register-command": "ts-node-dev -r tsconfig-paths/register --transpile-only --no-notify src/register.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.1.1",
+    "@tensorflow/tfjs": "^4.17.0",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "natural": "^6.12.0",
+    "nodemon": "^3.1.0",
+    "stopword": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/stopword": "^2.0.3",
+    "eslint": "^8.57.0",
+    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.8.8",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  }
+}
